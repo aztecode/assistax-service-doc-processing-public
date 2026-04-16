@@ -1,0 +1,35 @@
+[project]
+name = "assistax-pdf-processor"
+version = "1.0.0"
+description = "API que sustituye Azure Functions para procesamiento de PDFs legales"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = [".git", "__pycache__", ".venv", "venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = []
+
+[tool.black]
+target-version = ["py312"]
+line-length = 100
+exclude = '''
+/(
+    \.git
+    | __pycache__
+    | \.venv
+    | venv
+)/
+'''
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-v --tb=short"
+filterwarnings = ["ignore::DeprecationWarning"]

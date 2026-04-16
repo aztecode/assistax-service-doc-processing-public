@@ -1,0 +1,27 @@
+# API
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+gunicorn>=21.2.0
+
+# PDF y procesamiento
+PyMuPDF>=1.24.0
+psycopg2-binary>=2.9.0
+
+# Azure
+openai>=1.3.0
+azure-storage-blob>=12.19.0
+
+# Configuración y validación
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Observabilidad
+structlog>=24.0.0
+slowapi>=0.1.9
+
+# Jobs
+apscheduler>=3.10.0
+
+# Tests
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

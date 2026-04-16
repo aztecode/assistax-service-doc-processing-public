@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-03-25T05:30:56.198985+00:00",
+  "root": "/Users/rodrigojacome/Documents/Proyectos/rbv/procesar-archivos",
+  "pdf_count_requested": 230,
+  "pdf_count_ok": 230,
+  "pdf_count_failed": 0,
+  "total_pages": 20958,
+  "total_tables_raw": 3576,
+  "total_tables_kept": 3155,
+  "total_tables_discarded": 421,
+  "total_pages_with_drawings": 15853,
+  "total_pages_drawings_no_raw_table": 12962,
+  "total_pages_with_visual_rect": 0,
+  "total_pages_visual_rect_no_raw_table": 0,
+  "total_pages_with_any_discard": 419,
+  "total_arbiter_eligible_blocks": 0,
+  "total_arbiter_ambiguous_blocks": 0,
+  "wall_seconds": 917.6,
+  "notes": {
+    "visual_rect": "Same heuristics as pdf_extractor._extract_visual_rects (stroke rectangles min 100x30).",
+    "tables": "PyMuPDF find_tables + _merge_header_rows + _is_likely_prose_not_table discard.",
+    "llm_arbiter_estimate": "If ENABLE_LLM_BOXED_NOTE_ARBITER=true, LLM calls are up to arbiter_ambiguous per block (deterministic ambiguous only).",
+    "drawings_no_table_proxy": "pages_drawings_no_raw_table = get_drawings() non-empty on page but find_tables returned 0 tables on that page (broad LLM/vision candidate ceiling).",
+    "visual_rect_strict": "pages_visual_rect_* uses pdf_extractor rules (stroked rect min 100x30); many PDFs use lines without meeting this filter, so counts can be 0 while drawings_no_table is high."
+  }
+}

@@ -1,0 +1,3 @@
+# Optional spike only — NOT for default production installs.
+# pymupdf-layout: Polyform Noncommercial (or Artifex commercial). Confirm with legal before shipping.
+pymupdf-layout>=1.24.0
